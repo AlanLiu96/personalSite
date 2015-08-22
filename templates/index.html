@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Alan Liu</title>
+	<meta name="description" content="">  
+	<meta name="author" content="Alan Liu">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+	<link rel="stylesheet" href="static/css/layout.css">
+   <link rel="stylesheet" href="static/css/media-queries.css">
+   <link rel="stylesheet" href="static/css/animate.css">
+   <link rel="stylesheet" href="static/css/prettyPhoto.css">
+
+   <!-- Script
+   ================================================== -->
+	<script src="static/js/modernizr.js"></script>
+
+   <!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="static/favicon.ico" >
+
+</head>
+
+<body>
+
+   <div id="preloader">      
+      <div id="status">
+         <img src="static/images/preloader.gif" height="64" width="64" alt="">
+      </div>
+   </div>
+
+   <!-- Homepage Hero
+   ================================================== -->
+   <section id="hero">
+
+	   <div class="row">
+
+		   <div class="twelve columns">
+
+			   <div class="hero-text">
+            <img id="Image" />
+
+				   <h1 class="responsive-headline">Alan Liu</h1>
+
+				   <p>Hi! I am a sophomore currently studying math and computer science at Yale University. In my free time, I enjoy folding origami, eating sushi, and most of all, I like creating things. My dream is to make something that will forever change people's lives for the better.</p>
+
+
+			   </div>
+		   </div>
+         <div class = "two columns"></div>
+         <div class ="four columns">
+         <!-- todo: icons -->
+            <ul> 
+               <li>Contact: <a href= "mailto:alan.liu@yale.edu"> alan.liu@yale.edu</a></li>
+               <li>Github: <a href= "https://github.com/AlanLiu96">Github Code Portfolio</a></li>
+            </ul>
+         </div>
+         <div class = "one columns"></div>
+         <div class ="five columns">
+            <ul> 
+               <li>Resume: <a href="/static/Alan_Liu-Resume.pdf">Check out my resume</a></li>
+               <li>Connect: <a href= "https://www.linkedin.com/profile/view?id=398694397"> Linkedin</a></li>
+            </ul>
+            <br><br>
+         </div>
+
+	   </div>
+
+   </section> <!-- Homepage Hero end -->
+
+
+   <!-- projects Section
+   ================================================== -->
+   <section id='projects'>
+
+      <div class="row section-head">
+
+         <h1>Projects</h1>
+
+      </div>
+      <div class="row project design">
+
+         <div class="six columns right">
+            <h3><img src ="static/anon.png" alt="Anon icon" height="15" width="15">  Anon - <a href="https://anonmarket.com">anonmarket.com </a></h3>
+            <p>An online marketplace for digital files, allowing users to upload their own creative content and sell it anonymously.It utilizes a django based backend to provide the infrastructure and files for other users to download. Now, it targets an international audience as any user from China to Germany can download and upload files as well. 
+            </p>
+         </div>
+
+         <div class="six columns feature-media left">
+             <img src="static/anon_site.png" alt="Anonmarket" />
+         </div>
+
+      </div>
+
+      <div class="row feature responsive">
+
+         <div class="six columns left">
+            <h3>Reservations - <a href= "https://github.com/YaleSTC/reservations"> Github </a></h3>
+            <i>Worked with Yale Reservations Team</i>
+
+            <p>Reservations is an equipment tracking system for Yale's media libraries. It lets you reserve and checkout media equipment like cameras and tripods just like you would with books. The organized database makes handling complicated processes like late fees and reminder emails much simpler. 
+            </p>
+         </div>
+
+         <div class="six columns feature-media right">
+             <img src="static/reservations_site.png" alt="Reservations" />
+         </div>
+
+      </div>
+
+      <div class="row feature video">
+
+         <div class="six columns right">
+            <h3>Habitar - <a href= "http://habitar.me"> habitar.me </a></h3>
+            <i>YHack 2014 - Best Use of MongoDB API</i>
+            <p>Habitars are little fitness buddies that grow and evolve as you complete your habits daily. They are designed to motivate the user to follow through on their habits. It uses a MongoDB backend to keep track of each of our users' tasks and goals.</p>
+         </div>
+
+         <div class="six columns feature-media left">
+            <div class = "fluid-video-wrapper">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/x6XgSDWk058" frameborder="0" allowfullscreen></iframe>
+            </div>
+         </div>
+
+      </div>
+
+      <div class="row feature video">
+
+         <div class="six columns left">
+            <h3>iDuino - <a href= "http://devpost.com/software/iduino"> DevPost </a></h3>
+            <i>HackPrinceton Spring 2015 - Overall Hardware 2nd Place</i>
+            <p>iDuino brings accessibility and ease of use of other child-friendly visual programming languages like Scrach to hardware programming. It utilizes Bluetooth to transmit 1 byte commands in our original designed "coding language" from our iPhone app to the arduino allowing the user to control which ports to use and their functions. 
+            </p>
+         </div>
+
+         <div class="six columns feature-media right">
+             <div class="fluid-video-wrapper">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/2i225nTbclY" frameborder="0" allowfullscreen></iframe>
+             </div>
+         </div>
+
+      </div>
+
+   </section> <!-- Homepage Hero end -->
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="static/js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="static/js/jquery-migrate-1.2.1.min.js"></script>
+
+   <script src="static/js/jquery.flexslider.js"></script>
+   <script src="static/js/waypoints.js"></script>
+   <script src="static/js/jquery.fittext.js"></script>
+   <script src="static/js/jquery.fitvids.js"></script>
+   <script src="static/js/imagelightbox.js"></script>
+   <script src="static/js/jquery.prettyPhoto.js"></script>   
+   <script src="static/js/main.js"></script>
+
+</body>
+
+</html>

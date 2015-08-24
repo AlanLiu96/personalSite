@@ -154,6 +154,11 @@ margin: 0 0 18px 0; }
    letter-spacing: 1px;
    color: #D3D3D3;
 }
+
+.center-text {
+   text-align: center;
+}
+
 .fluid-video-wrapper { margin-top: 18px; }
 
 /* Flex Slider

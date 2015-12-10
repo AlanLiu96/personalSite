@@ -65,10 +65,6 @@
   fill: #636363;
 }
 
-.node .new rect {
-  fill: #00FF00;
-}
-
 .node .function rect {
   stroke: #3182bd;
 }
@@ -133,8 +129,7 @@
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js"></script>
-<center><h3>Modern Age</h3>
-<h4>(1958-Present)</h4>
+<center><h3>Modern Day Consumer Chain</h1>
 <script>
 
 var margin = {top: 0, right: 120, bottom: 0, left: 120},
@@ -332,43 +327,23 @@ function treeAnimation(startRoot, startHeight, endRoot, endHeight) {
 }
 
 treeAnimation(
-  {type: "selection", name: "Japanese Markets", children: [
-    {type: "array", name: "effects", children: [
-      {type: "element local", name: "local"},
-      {type: "element national", name: "national", children: [
-        {type: "element national new", name: "restoration of market system"}
-      ]},
-      {type: "element global", name: "global" , children: [
-        {type: "element global new", name: "international buyers"},
-        {type: "element global new", name: "global influence"},
-        {type: "element global new", name: "expansion of tourism industry"}
+  {type: "selection local", name: "fishers/sellers", children: [
+    {type: "array local", name: "consumers"}
+  ]},
+  24 * 1,
+  {type: "selection local", name: "fishing villages", children: [
+    {type: "array local", name: "auctioneers", children: [
+      {type: "element local", name: "wholesalers", children: [
+        {type:"element local", name: "clients", children: [
+          {type: "element local", name: "consumers"}
+        ]}
       ]}
     ]}
   ]},
-  24 * 5,
-  {type: "selection", name: "fishermen", children: [
-    {type: "array local", name: "auctioneers", children: [
-      {type: "element local", name: "wholesalers", children:[
-        {type: "element local new", name: "shop owners/clients", children: [
-          {type: "element local new", name: "customers"}
-        ]},
-        {type: "element global new", name: "global clients", children: [
-          {type: "element local new", name: "global customers"}
-        ]}
-      ]},
-      {type: "element national", name: "fees and licenses"}
-    ]},
-    {type: "array global new", name: "tourism"}
-  ]},
-  24 * 5
+  24 * 1
 );
 </script>
-
-
-<a href="/proj6.1">Modern Day Consumer Chain</a>
 <a href="projEnd">Analysis</a>
-
 </center>
 <br><br><br>
-<center><img src="static/proj/today.png" alt="Modern Day Map" height="475px" width="auto"/></center>
-<center><img src="http://d13uygpm1enfng.cloudfront.net/article-imgs/en/2013/09/08/AJ201107274991s/AJ201107274992M.jpg" alt="Modern Day Map" height="475px" width="auto"/></center>
+<img src="http://d1udmfvw0p7cd2.cloudfront.net/wp-content/uploads/2015/01/n-tuna-a-20150106.jpg" alt="Avoiding Tax Collectors" height="475px" width="auto" />

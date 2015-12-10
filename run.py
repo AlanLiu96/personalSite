@@ -33,6 +33,10 @@ def proj5():
 def proj6():
     return render_template('proj6.html')
 
+@app.route('/proj6.1')
+def proj6_1():
+    return render_template('proj6-1.html')
+
 @app.route('/projEnd')
 def projEnd():
     return render_template('projEnd.html')

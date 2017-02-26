@@ -9,10 +9,5 @@ def home():
 def project():
     return render_template('project.html')
 
-@app.route('/graph.json')
-def graph():
-    return render_template('graph.json')
-
-
 if __name__ == '__main__':
     app.run(debug = True)

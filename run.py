@@ -4,6 +4,7 @@ from flask.ext.login import UserMixin, LoginManager, \
     login_user, logout_user
 from flask.ext.blogging import SQLAStorage, BloggingEngine
 from flask.ext.heroku import Heroku
+import os
 
 app = Flask(__name__)
 heroku = Heroku(app)
@@ -13,6 +14,7 @@ app.config["BLOGGING_URL_PREFIX"] = "/blog"
 app.config["BLOGGING_DISQUS_SITENAME"] = "Alan's Blog"
 app.config["BLOGGING_SITEURL"] = "http://localhost:3000"
 app.config['BLOG_PASS']= 'iLikeToBlog'
+dbUrl = os.environ['DATABASE_URL']
 
 @app.route('/')
 def home():
@@ -25,7 +27,7 @@ def project():
 # BLOG BELOW
 
 # extensions
-engine = create_engine('sqlite:////tmp/blog.db')
+engine = create_engine(dbUrl)
 meta = MetaData()
 sql_storage = SQLAStorage(engine, metadata=meta)
 blog_engine = BloggingEngine(app, sql_storage)

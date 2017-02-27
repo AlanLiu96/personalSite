@@ -46,14 +46,14 @@ a {
 .sleek-btn:focus,
 .sleek-btn:active {
 	font-size: 18px;
-	color: #959595;
+	color: #2E2E2E;
 	border-color: #959595;
 	font-family: 'Lato';
 	font-weight: 'bold';
 	background-color: rgba(0, 0, 0, 0);
 }
 .sleek-btn:hover {
-	color: #959595;
+	color: #2E2E2E;
 	border-color: #959595;
 	background-color: rgba(0, 188, 212, 0.05);
 }
@@ -133,7 +133,7 @@ img {
     margin: 5px;
     text-indent: 0;
     cursor: pointer;
-    border: solid #959595 1px;
+    border: solid #2E2E2E 1px;
     border-radius: 50%;
     background-color: #fff;
 }
@@ -141,7 +141,7 @@ img {
     width: 24px;
     height: 24px;
     margin: 5px;
-    background-color: #959595;
+    background-color: #2E2E2E;
 }
 .carousel-indicators {
   bottom:-50px;

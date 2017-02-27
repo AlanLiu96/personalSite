@@ -1,4 +1,4 @@
-from flask import Flask, render_template, render_template_string, redirect
+from flask import Flask, render_template, render_template_string, redirect, session, request, flash
 from sqlalchemy import create_engine, MetaData
 from flask.ext.login import UserMixin, LoginManager, \
     login_user, logout_user
@@ -10,8 +10,9 @@ heroku = Heroku(app)
 
 app.config["SECRET_KEY"] = "secretLoginKey"  # for WTF-forms and login
 app.config["BLOGGING_URL_PREFIX"] = "/blog"
-app.config["BLOGGING_DISQUS_SITENAME"] = "test"
+app.config["BLOGGING_DISQUS_SITENAME"] = "Alan's Blog"
 app.config["BLOGGING_SITEURL"] = "http://localhost:3000"
+app.config['BLOG_PASS']= 'iLikeToBlog'
 
 @app.route('/')
 def home():
@@ -44,26 +45,30 @@ class User(UserMixin):
 def load_user(user_id):
     return User(user_id)
 
-# index_template = """
-# <!DOCTYPE html>
-# <html>
-#     <head> </head>
-#     <body>
-#         {% if current_user.is_authenticated %}
-#             <a href="/logout/">Logout</a>
-#         {% else %}
-#             <a href="/login/">Login</a>
-#         {% endif %}
-#         &nbsp&nbsp<a href="/blog/">Blog</a>
-#         &nbsp&nbsp<a href="/blog/sitemap.xml">Sitemap</a>
-#         &nbsp&nbsp<a href="/blog/feeds/all.atom.xml">ATOM</a>
-#     </body>
-# </html>
-# """
 
-# @app.route("/blog_index")
-# def index():
-#     return render_template_string(index_template)
+from flask.ext.wtf import Form
+from wtforms import StringField
+from wtforms.validators import DataRequired
+
+class LoginForm(Form):
+    passcode = StringField('passcode', validators=[DataRequired()])
+
+admin = 'alan'
+@app.route("/blog/login/", methods=['GET', 'POST'])
+def blog_login():
+    if session.get('user') and session.get('user') == admin:
+        return redirect("/blog")
+    form = LoginForm(request.form)
+    if request.method == 'POST':
+        if form.passcode.data == app.config['BLOG_PASS']:
+            session['user'] = admin
+            flash('Logged in successfully.')
+            user = User(admin)
+            login_user(user)
+            return redirect("/blog")
+        else:
+            flash('Incorrect passcode')
+    return render_template('blog_login.html', form=form)
 
 @app.route("/blogLoginAlan/")
 def login():

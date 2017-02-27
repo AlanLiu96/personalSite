@@ -3,8 +3,11 @@ from sqlalchemy import create_engine, MetaData
 from flask.ext.login import UserMixin, LoginManager, \
     login_user, logout_user
 from flask.ext.blogging import SQLAStorage, BloggingEngine
+from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
+heroku = Heroku(app)
+
 app.config["SECRET_KEY"] = "secretLoginKey"  # for WTF-forms and login
 app.config["BLOGGING_URL_PREFIX"] = "/blog"
 app.config["BLOGGING_DISQUS_SITENAME"] = "test"

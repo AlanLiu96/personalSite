@@ -15,57 +15,13 @@ Alan Liu
         <img src="{{ url_for('static', filename='prof.jpg') }}" class="img-circle" style="margin:auto" />
         <h1 class="title">Alan Liu</h1>
     </div>
-    <!-- {% if request.path.split('/')[2] == 'tag' and request.path.split('/')[3] != 'tech' and request.path.split('/')[3] != 'travel' %}
-    <h1>Tag: {{ request.path.split('/')[3]  }}</h1>
-    <br>
-    {% else %} -->
-<!--     <div class="text-center inline">
-        <a href="/blog">
-            <img onmouseover="this.src='{{ url_for('static', filename='img/bridge_head.jpg') }}'" onmouseout="this.src='{{ url_for('static', filename='img/bud_head.jpg') }}'" src="{{ url_for('static', filename='img/summerhead.png') }}" class="img-circle" style="margin:auto" />
-            <h1 class="title">Summer <span class="blue">Wu</span></h1>
-            <p class="description">Hello from Budapest!</p>
-        </a>-->
 
-<!--         <div>
-            <button type="button" class="sleek-btn btn btn-default" data-toggle="modal" data-target="#subscribe">
-                Subscribe
-            </button> -->
-
-            <!-- Modal -->
-<!--             <div class="msodal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="Subscribe">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Want to get updates?</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form action="https://tinyletter.com/sw5813" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/sw5813', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true" class="form-inline">
-                        <div class="sleek-form form-group">
-                            I'll send you an email when I post something new!<br>
-                            You can unsubscribe at any time.<br>
-                            <input type="email" class="sleek-input form-control input-lg" style="width:70%" name="email" id="tlemail" placeholder="Email" />
-                            <input type="hidden" value="1" name="embed"/>
-                            <input type="submit" class="sleek-input sleek-btn btn btn-default" style="width:35%" value="Subscribe" />
-                        </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div> -->
-<!--
-    </div>
-
-    <br>
- -->
     <!-- Category bar -->
 <!--     <div>
         <a class="category" href="{{ url_for('blogging.index') }}">All</a>
         <a class="category" href="{{ url_for('blogging.posts_by_tag', tag='travel') }}">Travel</a>
         <a class="category" href="{{ url_for('blogging.posts_by_tag', tag='tech') }}">Tech</a>
     </div> -->
-    {% endif %}
 
     <hr>
 

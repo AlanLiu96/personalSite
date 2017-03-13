@@ -27,7 +27,12 @@
    <!-- Script
    ================================================== -->
 	<script src="static/js/modernizr.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="/static/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/static/semantic/dist/semantic.min.js"></script>
    <!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="static/favicon.ico" >
@@ -35,138 +40,86 @@
 </head>
 
 <body>
+<!-- Following Menu -->
+<div class="ui  top inverted fixed menu transition">
+  <div class="ui container">
+      <a href = "/" class="active item"><i class = "home icon"></i>Home</a>
+      <a href ="/blog" class="item">Blog</a>
+      <!-- <a href ="/about" class="item">About</a> -->
+  </div>
+</div>
+<br><br>
 
-   <div id="preloader">
-      <div id="status">
-         <img src="static/images/preloader.gif" height="64" width="64" alt="">
+  <div class="ui inverted vertical masthead center aligned segment">
+    <img class="ui small bordered circular image centered " src="/static/prof_pic.jpg">
+    <h1 class="ui inverted header">Alan Liu</h1>
+    <p>Yale Class of 2018 ○ Computer Science BS/MS </p>
+    <i>Why just be a stargazer when you could be an astronaut?</i><br>
+
+    <div class="ui container">
+      <p>I like to not just dream, but make those dreams a reality. As a <b>project manager</b> and a <b>backend software engineer</b>, I spend my free time thinking deeply about where technology is going and building my place in that future. </p>
+    </div>
+    <a href="mailto:alan.liu@yale.edu"><i class="inverted mail icon"></i></a>
+    <a href="http://linkedin.com/in/alanliu96?"><i class="inverted linkedin icon"></i></a>
+    <a href="https://github.com/AlanLiu96"><i class="inverted github icon"></i></a>
+    <br><a href="/static/Alan Liu - Resume.pdf" style='color:white'><i class="inverted id card outline icon"></i>Resume</a>
+  </div>
+<br>
+
+<div class="ui horizontal divider"> Projects </div>
+<br>
+
+<div class="ui three stackable cards">
+  <div class="card">
+    <div class="image">
+      <img class="ui medium image" src="{{ url_for('static', filename='reservations_site.png') }}">
+    </div>
+    <div class="content">
+      <div class="header">Reservations <a href="https://github.com/YaleSTC/Reservations"><i class="github icon"></i></a></div>
+      <div class="meta">
+        <span class="category"><b>Project Manager</b> (Jan '15 - Now)</span>
       </div>
-   </div>
-
-   <!-- Homepage Hero
-   ================================================== -->
-   <section id="hero">
-
-	   <div class="row">
-
-		   <div class="twelve columns">
-
-			   <div class="hero-text">
-            <img id="Image" />
-
-				   <h1 class="responsive-headline">Alan Liu</h1>
-
-				   <p>Yale '18 ○ BS/MS Computer Science </p>
-               <p>Reading ○ Exploring ○ Running </p>
-               <p><a href= "mailto:alan.liu@yale.edu">Email</a> ○ <a href= "https://github.com/AlanLiu96">Github</a> ○ <a href="/static/Alan Liu - Resume.pdf">Resume</a> ○<a href= "https://www.linkedin.com/profile/view?id=398694397"> Linkedin</a> </p>
-               <a href="/blog">Blog</a>
-               <br>
-               (Currently under re-design! In the meantime, why not check out my <a href="/blog">blog</a>? :) )
-               <!-- Currently Reading: <i><a href="https://www.amazon.com/Thank-You-Being-Late-Accelerations/dp/0374273537">Thank You for Being Late</a></i> -->
-			   </div>
-      <br>
-
-   </section> <!-- Homepage Hero end -->
-
-
-   <!-- projects Section
-   ================================================== -->
-<!--    <section id='projects'>
-
-      <div class="row section-head">
-
-         <h1>Projects</h1>
-
+      <div class="description">
+        <p>Reservations is an equipment tracking system for media libraries. It's currently used by over 30 instances on Yale campus, with over 10,000 users.</p>
+        <p>I've worked to expand Reservations outside of Yale, met with clients and users, and contained emergencies when they occurred. As a mentor, I've guided underclassmen working on this project towards sustainable coding practices like test driven development.</p>
       </div>
-      <div class="row project design">
-
-         <div class="six columns right">
-            <h3><img src ="static/anon.png" alt="Anon icon" height="15" width="15">  Anon - <a href="https://anonmarket.herokuapp.com/">anonmarket.com </a></h3>
-            <i>Yale startup</i>
-            <p>An online marketplace for digital files, allowing users to upload their own creative content and sell it anonymously.It utilizes a django based backend to provide the infrastructure and files for other users to download. Now, it targets an international audience as any user from China to Germany can download and upload files as well.
-            </p>
-         </div>
-
-         <div class="six columns feature-media left">
-             <img src="static/anon_site.png" alt="Anonmarket" />
-         </div>
-
+    </div>
+  </div>
+ <div class="card">
+    <div class="image">
+      <img class="ui medium image" src="{{ url_for('static', filename='images/yhack.jpg') }}">
+    </div>
+    <div class="content">
+      <div class="header">YHack <a href="http://www.yhack.org"><img class="ui mini image" src="{{ url_for('static', filename='images/yhack_icon.png') }}"></a></div>
+      <div class="meta">
+        <span class="category"><b>Director of Technology</b> (Sept '15 - Now)</span>
       </div>
-
-      <div class="row feature responsive">
-
-         <div class="six columns left">
-            <h3>Reservations - <a href= "https://github.com/YaleSTC/reservations"> Github </a></h3>
-            <i>Worked with Yale Reservations Team</i>
-
-            <p>Reservations is an equipment tracking system for Yale's media libraries. It lets you reserve and checkout media equipment like cameras and tripods just like you would with books. The organized database makes handling complicated processes like late fees and reminder emails much simpler.
-            </p>
-         </div>
-
-         <div class="six columns feature-media right">
-             <img src="static/reservations_site.png" alt="Reservations" />
-         </div>
-
+      <div class="description">
+        <p> YHack is an annual 36-hour hackathon every November where over 1000 students from colleges across the globe work together in teams of 4 to solve current issues and present their prototypes. The YHack team also runs a day of teaching workshops in the Spring called CodeBoola for local high school students. </p>
+        <p> In addition to roles on sponsorship, and always trying to improve the quality of the event, as the web director, I'm responsible for the development, design implementation and upkeep of the <a href="http://yhack.org">YHack</a> and <a href="http://codeboola.yhack.org">CodeBoola</a> websites. </p>
       </div>
-
-
-
-      <div class="row feature video">
-
-         <div class="six columns right">
-            <h3>iDuino - <a href= "http://devpost.com/software/iduino"> DevPost </a></h3>
-            <i>HackPrinceton Spring 2015 - Overall Hardware 2nd Place</i>
-            <p>iDuino brings accessibility and ease of use of other child-friendly visual programming languages like Scratch to hardware programming. It utilizes Bluetooth to transmit 1 byte commands in our original designed "coding language" from our iPhone app to the arduino allowing the user to control which ports to use and their functions.
-            </p>
-         </div>
-
-         <div class="six columns feature-media left">
-             <div class="fluid-video-wrapper">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/2i225nTbclY" frameborder="0" allowfullscreen></iframe>
-             </div>
-         </div>
-
+    </div>
+  </div>
+<!--  <div class="card">
+    <div class="image">
+      <img src="{{ url_for('static', filename='reservations_site.png') }}">
+    </div>
+    <div class="content">
+      <div class="header">Reservations <a href="https://github.com/YaleSTC/Reservations"><i class="github icon"></i></a></div>
+      <div class="meta">
+        <span class="category">Project Manager (Jan '15 - Now)</span>
       </div>
-
-      <div class="row feature video">
-
-         <div class="six columns left">
-            <h3>Habitar - <a href= "http://habitar.herokuapp.com"> habitar.me </a></h3>
-            <i>YHack 2014 - Best Use of MongoDB API</i>
-            <p>Habitars are little fitness buddies that grow and evolve as you complete your habits daily. They are designed to motivate the user to follow through on their habits. It uses a MongoDB backend to keep track of each of our users' tasks and goals.</p>
-         </div>
-
-         <div class="six columns feature-media right">
-            <div class = "fluid-video-wrapper">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/x6XgSDWk058" frameborder="0" allowfullscreen></iframe>
-            </div>
-         </div>
-
+      <div class="description">
+        <p>Reservations is an equipment tracking system for media libraries. It's currently used by over 30 instances on Yale campus, with over 10,000 users.</p>
+        <p>I've worked to expand Reservations outside of Yale, met with clients and users, and contained emergencies when they occurred. As a mentor, I've guided underclassmen working on this project towards sustainable coding practices like test driven development.</p>
       </div>
+    </div>
+  </div> -->
+</div>
 
-      <div class = "row">
-         <div class = "twelve columns center-text">
-         <i>Take a look at all of my other hackathon projects on <a href="http://devpost.com/AlanLiu96"> DevPost</a>!</i>
 
-         </div>
-      </div>
-
-   </section> --> <!-- Homepage Hero end -->
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="static/js/jquery-1.10.2.min.js"><\/script>')</script>
-   <script type="text/javascript" src="static/js/jquery-migrate-1.2.1.min.js"></script>
-
-   <script src="static/js/jquery.flexslider.js"></script>
-   <script src="static/js/waypoints.js"></script>
-   <script src="static/js/jquery.fittext.js"></script>
-   <script src="static/js/jquery.fitvids.js"></script>
-   <script src="static/js/imagelightbox.js"></script>
-   <script src="static/js/jquery.prettyPhoto.js"></script>
-   <script src="static/js/main.js"></script>
 
 </body>
-
 <!-- Google Analytics -->
 
 <script>

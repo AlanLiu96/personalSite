@@ -19,6 +19,17 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='css/blog.css') }}" rel="stylesheet">
+   <!-- Script
+   ================================================== -->
+  <link rel="stylesheet" type="text/css" href="/static/semantic/dist/semantic.min.css">
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/static/semantic/dist/semantic.min.js"></script>
+
+
+
     <style>
         body { padding-top: 80px;}
     </style>
@@ -33,13 +44,12 @@
 <body>
     {% if request.path != "/blog/" and request.path.split('/')[3] != 'tech' and request.path.split('/')[3] != 'travel'%}
     <!-- navbar header -->
+
     <div class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a href="/blog" class="navbar-brand">
-                    <!--{{ config.BLOGGING_SITENAME or 'Flask-Blogging'}}-->
                     Alan Liu
-                    <!-- TODO: Add special font? -->
                 </a>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                     <span class="icon-bar"></span>
@@ -50,6 +60,15 @@
         </div>
     </div>
     {% endif %}
+
+    <div class="ui top fixed menu transition">
+      <div class="ui container">
+        <a href = "/" class="item"><i class = "home icon"></i>Home</a>
+        <a href ="/blog" class="active item">Blog</a>
+        <!-- <a href ="/about" class="item">About</a> -->
+      </div>
+    </div>
+    <br><br>
 
     <!-- main content -->
      <div class="container">
@@ -96,4 +115,10 @@
     {% block extrajs %}
     {% endblock extrajs %}
 </body>
+
+<footer>
+  <div class="ui segment">
+    <i>Leave me a message either through <a href="https://www.facebook.com/AlanLiu1996">Facebook</a> or <a href="mailto:alan.liu@yale.edu"> Email</a>.</i>
+  </div>
+</footer>
 </html>

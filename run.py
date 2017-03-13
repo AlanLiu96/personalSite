@@ -20,8 +20,8 @@ dbUrl = os.environ['DATABASE_URL']
 def home():
     return render_template('index.html')
 
-@app.route('/project')
-def project():
+@app.route('/about')
+def about():
     return render_template('project.html')
 
 # BLOG BELOW

@@ -14,7 +14,7 @@ app.config["BLOGGING_URL_PREFIX"] = "/blog"
 app.config["BLOGGING_DISQUS_SITENAME"] = "Alan's Blog"
 app.config["BLOGGING_SITEURL"] = "http://localhost:3000"
 app.config['BLOG_PASS']= 'iLikeToBlog'
-dbUrl = os.environ['DATABASE_URL']
+dbUrl = os.environ['BLOG_DATABASE_URL']
 
 @app.route('/')
 def home():

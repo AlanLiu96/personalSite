@@ -41,7 +41,7 @@
 
 <body>
 <!-- Following Menu -->
-<div class="ui  top inverted fixed menu transition">
+<div class="ui top inverted fixed menu transition">
   <div class="ui container">
       <a href = "/" class="active item"><i class = "home icon"></i>Home</a>
       <a href ="/blog" class="item">Blog</a>
@@ -69,7 +69,25 @@
 <div class="ui horizontal divider"> Projects </div>
 <br>
 
-<div class="ui three stackable cards">
+<div class="ui three stackable cards container">
+ <div class="card">
+    <div class="image">
+      <img class="ui medium image" src="{{ url_for('static', filename='images/yhack.jpg') }}">
+    </div>
+    <div class="content">
+      <div class="header">YHack <a href="http://www.yhack.org"><img class="ui mini image" src="{{ url_for('static', filename='images/yhack_icon.png') }}"></a></div>
+      <div class="meta">
+        <span class="category"><b>Director of Technology</b> (Sept '15 - Now)</span>
+      </div>
+      <div class="description">
+        <p> YHack is an annual 36-hour hackathon every November where over 1000 students from colleges across the globe work together to solve current issues and present their prototypes. The YHack team also runs a day of teaching workshopsfor local high school students in the Spring called CodeBoola. </p>
+        <ul class="ui list">
+          <li> Created <a href="http://codeboola.yhack.org">Codeboola 2017</a>, <a href="http://yhack.org">YHack 2017</a>, <a href="http://codeboola.herokuapp.com/">Codeboola 2016</a> Websites</li>
+          <li> Personally raised over $12,000 in sponsorships</li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="card">
     <div class="image">
       <img class="ui medium image" src="{{ url_for('static', filename='reservations_site.png') }}">
@@ -81,22 +99,32 @@
       </div>
       <div class="description">
         <p>Reservations is an equipment tracking system for media libraries. It's currently used by over 30 instances on Yale campus, with over 10,000 users.</p>
-        <p>I've worked to expand Reservations outside of Yale, met with clients and users, and contained emergencies when they occurred. As a mentor, I've guided underclassmen working on this project towards sustainable coding practices like test driven development.</p>
+        <ul class="ui list">
+          <li> Increased User Feedback and Testing by 300%</li>
+          <li> Met with clients to resolve critical issues</li>
+          <li> Expanded Reservations to 2 instances outside Yale</li>
+          <li> Mentored students on sustainable software development</li>
+        </ul>
       </div>
     </div>
   </div>
- <div class="card">
+  <div class="card">
     <div class="image">
-      <img class="ui medium image" src="{{ url_for('static', filename='images/yhack.jpg') }}">
+      <img class="ui medium image" src="{{ url_for('static', filename='images/td.jpg') }}">
     </div>
     <div class="content">
-      <div class="header">YHack <a href="http://www.yhack.org"><img class="ui mini image" src="{{ url_for('static', filename='images/yhack_icon.png') }}"></a></div>
+      <div class="header">Vesta<a href="https://github.com/YaleSTC/Vesta"><i class="github icon"></i></a></div>
       <div class="meta">
-        <span class="category"><b>Director of Technology</b> (Sept '15 - Now)</span>
+        <span class="category"><b>Software Developer</b> (Sept '16 - Now)</span>
       </div>
       <div class="description">
-        <p> YHack is an annual 36-hour hackathon every November where over 1000 students from colleges across the globe work together in teams of 4 to solve current issues and present their prototypes. The YHack team also runs a day of teaching workshops in the Spring called CodeBoola for local high school students. </p>
-        <p> In addition to roles on sponsorship, and always trying to improve the quality of the event, as the web director, I'm responsible for the development, design implementation and upkeep of the <a href="http://yhack.org">YHack</a> and <a href="http://codeboola.yhack.org">CodeBoola</a> websites. </p>
+        <p>Vesta is a room draw application used by all of Yale's residential colleges.</p>
+        <ul class="ui list">
+          <li> Improved transparency and fairness of room draw process</li>
+          <li> Ran user testing and preliminary client feedback</li>
+          <li> Worked with leads to design code structure</li>
+          <li> Mentored other students to create features and resolve bugs</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -115,9 +143,8 @@
       </div>
     </div>
   </div> -->
-</div>
 
-
+</div> <!-- end container -->
 
 </body>
 <!-- Google Analytics -->

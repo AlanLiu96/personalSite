@@ -1,0 +1,148 @@
+/*
+ * Globals
+ */
+
+/*@font-face {
+  font-family: 'Chalkduster';
+  src: url(../fonts/Chalkduster.ttf);
+}*/
+
+@font-face {
+  font-family: 'Cambria';
+  src: url(../fonts/Cambria.ttf);
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(../fonts/lato-light.ttf);
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url(../fonts/HelveticaNeue-Black.otf);
+}
+
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+a {
+	color: #959595;
+}
+.category {
+	font-size: 24px;
+	font-family: 'Lato';
+	margin-right: 20px;
+}
+.active_cat {
+	font-weight: bold;
+}
+
+/* Buttons */
+.sleek-btn,
+.sleek-btn:focus,
+.sleek-btn:active {
+	font-size: 18px;
+	color: #2E2E2E;
+	border-color: #959595;
+	font-family: 'Lato';
+	font-weight: 'bold';
+	background-color: rgba(0, 0, 0, 0);
+}
+.sleek-btn:hover {
+	color: #2E2E2E;
+	border-color: #959595;
+	background-color: rgba(0, 188, 212, 0.05);
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  color: #000;
+  text-align: left;
+}
+
+h1 {
+	color: #000;
+}
+
+p {
+	font-family: 'Cambria', serif;
+	color: #111;
+	font-size: 1.5em;
+}
+
+img {
+	height: 200px;
+}
+
+.container {
+	max-width: 800px;
+}
+
+/* Post styles */
+.title {
+	font-size: 3em;
+	font-family: 'Helvetica', sans-serif;
+}
+.date {
+	color: #888;
+	font-size: 18px;
+}
+.description {
+	color: #888;
+	font-family: 'Lato';
+}
+.navbar {
+	background-color: #fff;
+}
+.navbar-brand {
+	color: #000;
+	font-family: 'Helvetica';
+	font-size: 1.2em;
+}
+.blue {
+	color: #959595;
+}
+
+/* Forms */
+.sleek-form {
+	width: 80%;
+	font-family: 'Lato';
+	font-size: 18px;
+	margin: auto;
+}
+.sleek-input {
+	margin: 10px auto;
+}
+
+/* Post Carousel */
+.carousel-indicators li {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    text-indent: 0;
+    cursor: pointer;
+    border: solid #2E2E2E 1px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.carousel-indicators .active {
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    background-color: #2E2E2E;
+}
+.carousel-indicators {
+  bottom:-50px;
+}

@@ -1,46 +1,88 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, render_template_string, redirect, session, request, flash
+from sqlalchemy import create_engine, MetaData
+from flask.ext.login import UserMixin, LoginManager, \
+    login_user, logout_user
+from flask.ext.blogging import SQLAStorage, BloggingEngine
+from flask.ext.heroku import Heroku
+import os
+
 app = Flask(__name__)
+heroku = Heroku(app)
+
+app.config["SECRET_KEY"] = "secretLoginKey"  # for WTF-forms and login
+app.config["BLOGGING_URL_PREFIX"] = "/blog"
+app.config["BLOGGING_DISQUS_SITENAME"] = "Alan's Blog"
+app.config["BLOGGING_SITEURL"] = "http://localhost:3000"
+app.config['BLOG_PASS']= 'iLikeToBlog'
+dbUrl = os.environ['BLOG_DATABASE_URL']
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/proj1')
-def proj1():
-    return render_template('proj1.html')
+@app.route('/about')
+def about():
+    return render_template('project.html')
 
-@app.route('/proj1.1')
-def proj1_1():
-    return render_template('proj1-1.html')
+# BLOG BELOW
 
-@app.route('/proj2')
-def proj2():
-    return render_template('proj2.html')
+# extensions
+engine = create_engine(dbUrl)
+meta = MetaData()
+sql_storage = SQLAStorage(engine, metadata=meta)
+blog_engine = BloggingEngine(app, sql_storage)
+login_manager = LoginManager(app)
+meta.create_all(bind=engine)
 
-@app.route('/proj3')
-def proj3():
-    return render_template('proj3.html')
+# user class for providing authentication
+class User(UserMixin):
+    def __init__(self, user_id):
+        self.id = user_id
 
-@app.route('/proj4')
-def proj4():
-    return render_template('proj4.html')
+    def get_name(self):
+        return "Alan Liu"  # typically the user's name
 
-@app.route('/proj5')
-def proj5():
-    return render_template('proj5.html')
+@login_manager.user_loader
+@blog_engine.user_loader
+def load_user(user_id):
+    return User(user_id)
 
-@app.route('/proj6')
-def proj6():
-    return render_template('proj6.html')
 
-@app.route('/proj6.1')
-def proj6_1():
-    return render_template('proj6-1.html')
+from flask.ext.wtf import Form
+from wtforms import StringField
+from wtforms.validators import DataRequired
 
-@app.route('/projEnd')
-def projEnd():
-    return render_template('projEnd.html')
+class LoginForm(Form):
+    passcode = StringField('passcode', validators=[DataRequired()])
+
+admin = 'alan'
+@app.route("/blog/login/", methods=['GET', 'POST'])
+def blog_login():
+    if session.get('user') and session.get('user') == admin:
+        return redirect("/blog")
+    form = LoginForm(request.form)
+    if request.method == 'POST':
+        if form.passcode.data == app.config['BLOG_PASS']:
+            session['user'] = admin
+            flash('Logged in successfully.')
+            user = User(admin)
+            login_user(user)
+            return redirect("/blog")
+        else:
+            flash('Incorrect passcode')
+    return render_template('blog_login.html', form=form)
+
+@app.route("/blogLoginAlan/")
+def login():
+    user = User("alan")
+    login_user(user)
+    return redirect("/blog")
+
+@app.route("/logout/")
+def logout():
+    logout_user()
+    return redirect("/")
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True, port = 3000)

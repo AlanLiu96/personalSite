@@ -2,162 +2,141 @@
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 
-   <!--- Basic Page Needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Alan Liu</title>
-	<meta name="description" content="">
-	<meta name="author" content="Alan Liu">
-
-   <!-- Mobile Specific Metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
+    <!--- Basic Page Needs
     ================================================== -->
-   <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
-	<link rel="stylesheet" href="static/css/layout.css">
-   <link rel="stylesheet" href="static/css/media-queries.css">
-   <link rel="stylesheet" href="static/css/animate.css">
-   <link rel="stylesheet" href="static/css/prettyPhoto.css">
+    <meta charset="utf-8">
+    <title>Alan Liu</title>
+    <meta name="description" content="">
+    <meta name="author" content="Alan Liu">
 
-   <!-- Script
-   ================================================== -->
-	<script src="static/js/modernizr.js"></script>
-  <link rel="stylesheet" type="text/css" href="/static/semantic/dist/semantic.min.css">
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-  <script src="/static/semantic/dist/semantic.min.js"></script>
-   <!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="static/favicon.ico" >
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/media-queries.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    <link rel="stylesheet" href="static/css/prettyPhoto.css">
+
+    <!-- Script
+    ================================================== -->
+    <script src="static/js/modernizr.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/semantic/dist/semantic.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="/static/semantic/dist/semantic.min.js"></script>
+    <!-- Favicons
+     ================================================== -->
+    <link rel="shortcut icon" href="static/favicon.ico">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+    </style>
 </head>
 
 <body>
 <!-- Following Menu -->
-<div class="ui top inverted fixed menu transition">
-  <div class="ui container">
-      <a href = "/" class="active item"><i class = "home icon"></i>Home</a>
-      <a href ="/blog" class="item">Blog</a>
-      <a href ="https://medium.com/@alanliu96" class="item">Medium Articles</a>
-      <!-- <a href ="/about" class="item">About</a> -->
-  </div>
-</div>
-<br><br>
-
-  <div class="ui inverted vertical masthead center aligned segment">
-    <img class="ui small bordered circular image centered " src="/static/prof_pic.jpg">
-    <h1 class="ui inverted header">Alan Liu</h1>
-    <p>Yale Class of 2018 ○ Computer Science BS/MS </p>
-    <i>Why just be a stargazer when you could be an astronaut?</i><br>
-
+<div class="ui top fixed  large text menu">
     <div class="ui container">
-      <p>I like to not just dream, but make those dreams a reality. <br>As a <b>project manager</b> and a <b>backend software engineer</b>, <br> I spend my free time thinking deeply about where technology is going and building my place in that future. </p>
+        <a href="/" class="active item">Work</a>
+        <a href="/about" class="item">Bio</a>
+        <a href="https://medium.com/@alanliu96" class="item">Musings</a>
+        <!-- <a href ="/about" class="item">About</a> -->
     </div>
-    <a href="mailto:alan.liu@yale.edu"><i class="inverted mail icon"></i></a>
-    <a href="http://linkedin.com/in/alanliu96?"><i class="inverted linkedin icon"></i></a>
-    <a href="https://github.com/AlanLiu96"><i class="inverted github icon"></i></a>
-    <br><a href="/static/Alan Liu - Resume.pdf" style='color:white'><i class="inverted id card outline icon"></i>Resume</a>
-  </div>
-<br>
+</div>
 
-<div class="ui horizontal divider"> Projects </div>
-<br>
+<div class="ui two columnn vertically padded grid container" style="height: 95%">
+    <div class="ui column basic middle aligned left floated segment hello">
+        <div class="ui huge header" style="font-family: Montserrat;"> Hello. <br>
+            I'm Alan.
+        </div>
+    </div>
+    <div class="ui middle aligned right floated column">
+        <img class="ui gigantic circular image"
+             src="/static/profile_pic_square.jpg">
+    </div>
 
-<div class="ui three stackable cards container">
- <div class="card">
-    <div class="image">
-      <img class="ui medium image" src="{{ url_for('static', filename='images/yhack.jpg') }}">
-    </div>
-    <div class="content">
-      <div class="header">YHack <a href="http://www.yhack.org"><img class="ui mini image" src="{{ url_for('static', filename='images/yhack_icon.png') }}"></a></div>
-      <div class="meta">
-        <span class="category"><b>Director of Technology</b> (Sept '15 - Now)</span>
-      </div>
-      <div class="description">
-        <p> YHack is an annual 36-hour hackathon every November where over 1000 students from colleges across the globe work together to solve current issues and present their prototypes. The YHack team also runs a day of teaching workshopsfor local high school students in the Spring called CodeBoola. </p>
-        <ul class="ui list">
-          <li> Created <a href="http://codeboola.yhack.org">Codeboola 2017</a>, <a href="http://yhack.org">YHack 2017</a>, <a href="http://codeboola.herokuapp.com/">Codeboola 2016</a> Websites</li>
-          <li> Personally raised over $12,000 in sponsorships</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image">
-      <img class="ui medium image" src="{{ url_for('static', filename='images/bml.jpg') }}">
-    </div>
-    <div class="content">
-      <div class="header">Reservations <a href="https://github.com/YaleSTC/Reservations"><i class="github icon"></i></a></div>
-      <div class="meta">
-        <span class="category"><b>Project Manager</b> (Jan '15 - May '17)</span>
-      </div>
-      <div class="description">
-        <p>Reservations is an equipment tracking system for media libraries. It's currently used by over 30 instances on Yale campus, with over 10,000 users.</p>
-        <ul class="ui list">
-          <li> Increased User Feedback and Testing by 300%</li>
-          <li> Met with clients to resolve critical issues</li>
-          <li> Expanded Reservations to 2 instances outside Yale</li>
-          <li> Mentored students on sustainable software development</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image">
-      <img class="ui medium image" src="{{ url_for('static', filename='images/td.jpg') }}">
-    </div>
-    <div class="content">
-      <div class="header">Vesta<a href="https://github.com/YaleSTC/Vesta"><i class="github icon"></i></a></div>
-      <div class="meta">
-        <span class="category"><b>Software Developer</b> (Sept '16 - May '17)</span>
-      </div>
-      <div class="description">
-        <p>Vesta is a room draw application used by all of Yale's residential colleges.</p>
-        <ul class="ui list">
-          <li> Improved transparency and fairness of room draw process</li>
-          <li> Ran user testing and preliminary client feedback</li>
-          <li> Worked with leads to design code structure</li>
-          <li> Mentored other students to create features and resolve bugs</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-<!--  <div class="card">
-    <div class="image">
-      <img src="{{ url_for('static', filename='reservations_site.png') }}">
-    </div>
-    <div class="content">
-      <div class="header">Reservations <a href="https://github.com/YaleSTC/Reservations"><i class="github icon"></i></a></div>
-      <div class="meta">
-        <span class="category">Project Manager (Jan '15 - Now)</span>
-      </div>
-      <div class="description">
-        <p>Reservations is an equipment tracking system for media libraries. It's currently used by over 30 instances on Yale campus, with over 10,000 users.</p>
-        <p>I've worked to expand Reservations outside of Yale, met with clients and users, and contained emergencies when they occurred. As a mentor, I've guided underclassmen working on this project towards sustainable coding practices like test driven development.</p>
-      </div>
-    </div>
-  </div> -->
+    {#    <h1 class="ui inverted header">Alan Liu</h1>#}
+    {#    <p>Yale University ○ Class of 2018 ○ Computer Science BS/MS </p>#}
+    {#    <i>Why just be a stargazer when you could be an astronaut?</i><br>#}
+    {##}
+    {#    <div class="ui container">#}
+    {#        <p>I like to not just dream, but make those dreams a reality. <br>As a <b>project manager</b> and a <b>backend#}
+    {#            software engineer</b>, <br> I spend my free time thinking deeply about where technology is going and#}
+    {#            building my place in that future. </p>#}
+    {#    </div>#}
+    {#    <a href="mailto:alan.liu@yale.edu"><i class="inverted mail icon"></i></a>#}
+    {#    <a href="http://linkedin.com/in/alanliu96?"><i class="inverted linkedin icon"></i></a>#}
+    {#    <a href="https://github.com/AlanLiu96"><i class="inverted github icon"></i></a>#}
+    {#    <br><a href="/static/Alan Liu - Resume.pdf" style='color:white'><i class="inverted id card outline icon"></i>Resume</a>#}
+</div>
 
-</div> <!-- end container -->
+{#<div class="ui horizontal hidden divider see-more"><i class="grey chevron down icon see-more"></i>#}
+{#</div>#}
+{#<br><br><br>#}
+
+<div class="ui divider"></div>
+<div class="ui basic center aligned segment">
+    <div class="ui header" style="font-family: Montserrat;"> Interested? Let's chat.
+    </div>
+            <a href="mailto:hello@alanliu.info"><i class=" mail icon"></i></a>
+        <a href="http://linkedin.com/in/alanliu96?"><i class="linkedin icon"></i></a>
+        <a href="https://github.com/AlanLiu96"><i class="github icon"></i></a>
+</div>
 
 </body>
+
+<script>
+
+    $('.hello')
+        .transition({
+            animation: 'fade up in',
+            duration: 2500
+        });
+
+
+    $('.see-more')
+        .transition({
+            animation: 'fade out',
+            duration: 1
+        });
+
+    setTimeout(function () {
+        $('.see-more')
+            .transition({
+                animation: 'fade up in',
+                duration: 2500
+            });
+    }, 3000)
+
+
+</script>
 <!-- Google Analytics -->
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-68821504-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-68821504-1', 'auto');
+    ga('send', 'pageview');
 
 </script>
 

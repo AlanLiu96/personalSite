@@ -1,56 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-
-    <!--- Basic Page Needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Alan Liu</title>
-    <meta name="description" content="">
-    <meta name="author" content="Alan Liu">
-
-    <!-- Mobile Specific Metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
-    <link rel="stylesheet" href="static/css/layout.css">
-    <link rel="stylesheet" href="static/css/media-queries.css">
-    <link rel="stylesheet" href="static/css/animate.css">
-    <link rel="stylesheet" href="static/css/prettyPhoto.css">
-
-    <!-- Script
-    ================================================== -->
-    <script src="static/js/modernizr.js"></script>
-    <link rel="stylesheet" type="text/css" href="/static/semantic/dist/semantic.min.css">
-    <script
-            src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-    <script src="/static/semantic/dist/semantic.min.js"></script>
-    <!-- Favicons
-     ================================================== -->
-    <link rel="shortcut icon" href="static/favicon.ico">
-
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-    </style>
-</head>
+{% include "header.html" %}
 
 <body>
 <!-- Following Menu -->
-<div class="ui top fixed  large text menu">
+<div class="ui top fixed large text menu">
     <div class="ui container">
-        <a href="/" class="active item">Work</a>
-        <a href="/about" class="item">Bio</a>
+        <a href="/" class="active item">Hello</a>
+        <a href="/work" class="item">Work</a>
+        <a href="/about" class="item">About</a>
         <a href="https://medium.com/@alanliu96" class="item">Musings</a>
-        <!-- <a href ="/about" class="item">About</a> -->
     </div>
 </div>
 
@@ -66,24 +24,14 @@
     </div>
 </div>
 
-{#<div class="ui horizontal hidden divider see-more"><i class="grey chevron down icon see-more"></i>#}
-{#</div>#}
-{##}
-{#<div class="ui segment" style="font-family: Montserrat;">#}
-{#    <div class="ui header">Facebook Portal Smart Camera</div>#}
-{#        <div class="ui huge header" > Hello. <br>#}
-{#            I'm Alan.#}
-{#        </div>#}
-{#</div>#}
-
-<div class="ui divider"></div>
-<div class="ui basic center aligned segment">
-    <div class="ui header" style="font-family: Montserrat;"> Interested? Let's chat.
-    </div>
-    <a href="mailto:hello@alanliu.info"><i class="black mail icon"></i></a>
-    <a href="http://linkedin.com/in/alanliu96?"><i class="black linkedin icon"></i></a>
-    <a href="https://github.com/AlanLiu96"><i class="black github icon"></i></a>
+<div class="ui horizontal hidden divider see-more"><i class="grey chevron down icon see-more"></i>
 </div>
+
+<div class="ui center aligned container see-more" >
+    <br><br>
+    <div class ="ui large header basic segment" style="font-family: Montserrat;">
+    Here are some of my <a href="/work">efforts</a>, <a href="/values">values</a> and <a href="https://medium.com/@alanliu96">thoughts</a>.
+</div><br><br></div>
 
 </body>
 
@@ -108,9 +56,7 @@
                 animation: 'fade up in',
                 duration: 2500
             });
-    }, 3000)
-
-
+    }, 2000)
 </script>
 <!-- Google Analytics -->
 

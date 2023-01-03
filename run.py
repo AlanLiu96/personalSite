@@ -24,5 +24,15 @@ def privacy_policy():
     return render_template('privacy.html')
 
 
+@app.route('/app-ads.txt')
+def app_ads():
+    return render_template('app-ads.txt')
+
+
+@app.route('/ads.txt')
+def ads():
+    return render_template('app-ads.txt')
+
+
 if __name__ == '__main__':
     app.run(debug=('DEBUG' in os.environ), host='0.0.0.0', port=7000)
